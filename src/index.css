@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+}
+
+header {
+  background-image: url("./assets/vivid-blurred-colorful-wallpaper.webp");
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
