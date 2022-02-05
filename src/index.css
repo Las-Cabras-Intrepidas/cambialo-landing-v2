@@ -1,10 +1,20 @@
+@font-face {
+  font-family: "Poppins";
+  src:
+    url("./assets/fonts/Poppins-Regular.ttf") format("ttf"),
+    url("./assets/fonts/Poppins-Regular.woff") format("woff"),
+    url("./assets/fonts/Poppins-Regular.woff2") format("woff2");
+}
+
 body {
   margin: 0;
+  font-family: "Poppins";
 }
 
 header {
-  background-image: url("./assets/vivid-blurred-colorful-wallpaper.webp");
-  height: 100vh;
+  background-image: url("./assets/background-1200.webp");
+  background-size: cover;
+  height: 90vh;
   margin: 0;
   padding: 0;
 }
@@ -12,4 +22,127 @@ header {
 h1 {
   margin: 0;
   padding: 0;
+}
+
+.hero-img {
+  border-radius: 2px;
+  border: 3px solid #fff;
+  margin-bottom: -24px;
+  background-image: url("./assets/chicas.webp");
+  background-size: cover;
+  background-position: center;
+  min-height: 50vh;
+  box-shadow: inset 0 0 0 1000px #ffffffaf;
+}
+
+.hero-img img {
+  margin-top: 1rem;
+  width: 90%;
+}
+
+.title {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  width: 90%;
+  font-size: 1.25rem;
+  margin: 1rem auto;
+  color: rgb(0, 0, 0);
+  /* text-shadow: 0 0 4px #464646b0; */
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+section {
+  min-height: 50vh;
+}
+
+.flex {
+  display: flex;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  flex-direction: column;
+  width: 80%;
+  text-align: center;
+}
+
+.btn {
+  background-color: #012bb3;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 1.125rem;
+}
+
+.btn a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+  transform: translateX(4px);
+}
+
+.sections {
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.img-container {
+  width: 100%;
+}
+
+.column {
+  width: 70%;
+  text-align: center;
+}
+
+.banner {
+  width: 70%;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 750px) {
+  .sections {
+    flex-direction: row;
+  }
+
+  .empty {
+    width: 79%;
+  }
+
+  .hero-text {
+    text-align: right;
+  }
+
+  .hero-subtitle {
+    text-align: right;
+    margin-right: 1rem;
+  }
+
+  .subtitle {
+    font-size: 1.75rem;
+  }
+
+  .last-row {
+    flex-direction: column;
+  }
+
+  .banner {
+    width: 50%;
+  }
 }
