@@ -1,7 +1,7 @@
 const line = document.getElementById("line");
 const pathLength = line.getTotalLength();
 
-line.style.strokeDasharray = pathLength + 50;
+line.style.strokeDasharray = pathLength;
 line.style.strokeDashoffset = pathLength;
 
 window.addEventListener("scroll", showLine);
