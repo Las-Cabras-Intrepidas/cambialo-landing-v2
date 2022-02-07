@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Poppins";
-  src: url("./assets/fonts/Poppins-Regular.ttf") format("ttf"),
+  src:
+    url("./assets/fonts/Poppins-Regular.ttf") format("ttf"),
     url("./assets/fonts/Poppins-Regular.woff") format("woff"),
     url("./assets/fonts/Poppins-Regular.woff2") format("woff2");
 }
@@ -16,13 +17,14 @@ body {
 
 svg {
   position: absolute;
+  top: 150px;
   left: 50%;
   transform: translate(-50%, 0);
 }
 
 header {
   background: linear-gradient(#0227b8, #06b2c2, #fff);
-  height: 80vh;
+  height: 90vh;
   margin: 0;
   padding: 0;
 }
@@ -30,6 +32,7 @@ header {
 h1 {
   margin: 0;
   padding: 0;
+  z-index: 2;
 }
 
 .gradient {
@@ -98,6 +101,8 @@ section {
   padding: 0.5rem 1rem;
   font-size: 1.125rem;
   margin-bottom: 2rem;
+  transition: transform 300ms;
+  z-index: 2;
 }
 
 .btn a {
@@ -107,7 +112,8 @@ section {
 
 .btn:hover {
   cursor: pointer;
-  transform: translateX(4px);
+  transform: translateY(-4px);
+  background-color: #002292;
 }
 
 .sections {
@@ -175,6 +181,7 @@ section {
 h4 {
   margin: 0;
   margin-top: 1rem;
+  z-index: 2;
 }
 
 .rrss-list {
@@ -312,43 +319,53 @@ footer h4 {
   opacity: 0;
   transition: opacity 1s;
 }
+
 .js-scroll.scrolled {
   opacity: 1;
 }
+
 .scrolled.slide-right {
   animation: slide-in-right 1.2s ease-in-out both;
 }
+
 @keyframes slide-in-right {
   0% {
     transform: translateX(100px);
     opacity: 0;
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
   }
 }
+
 .scrolled.slide-left {
   animation: slide-in-left 1.2s ease-in-out both;
 }
+
 @keyframes slide-in-left {
   0% {
     transform: translateX(-100px);
     opacity: 0;
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
   }
 }
+
 .scrolled.fade-in-bottom {
   animation: fade-in-bottom 1.3s ease-in-out both;
 }
+
 @keyframes fade-in-bottom {
   0% {
     transform: translateY(50px);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
