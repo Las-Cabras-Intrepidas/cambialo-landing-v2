@@ -16,13 +16,20 @@ body {
 
 svg {
   position: absolute;
-  left: 0;
+  left: 48%;
+  transform: translate(-50%, 0);
+
+  /* display: inline-block; */
   top: 0;
-  transform: translate(18%, 0);
-  width: 80%;
-  margin-top: -20px;
-  /*
-  -webkit-transform: translate(-50%, 0);  */
+}
+
+.line-desktop {
+  display: none;
+}
+
+.line-mobile {
+  top: 64%;
+  display: inline-block;
 }
 
 header {
@@ -269,11 +276,19 @@ footer h4 {
   }
 
   .banner {
-    width: 50%;
+    width: 35%;
   }
 }
 
 @media (min-width: 900px) {
+  .line-desktop {
+    display: inline-block;
+  }
+
+  .line-mobile {
+    display: none;
+  }
+
   .img-container {
     max-width: 70%;
   }
@@ -310,6 +325,14 @@ footer h4 {
 @media (min-width: 1350px) {
   .row {
     width: 25%;
+  }
+
+  .column {
+    width: 40%;
+  }
+
+  .column.products-container {
+    width: 60%;
   }
 }
 

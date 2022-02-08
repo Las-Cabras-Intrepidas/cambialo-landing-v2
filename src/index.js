@@ -1,16 +1,27 @@
-const line = document.getElementById("line");
-const pathLength = line.getTotalLength();
+const lineDesktop = document.getElementById("line");
+const lineMobile = document.getElementById("lineMobile");
 
-line.style.strokeDasharray = pathLength;
-line.style.strokeDashoffset = pathLength;
+const lineDesktopLength = lineDesktop.getTotalLength();
+const lineMobileLength = lineMobile.getTotalLength();
 
-window.addEventListener("scroll", showLine);
+lineDesktop.style.strokeDasharray = lineDesktopLength;
+lineDesktop.style.strokeDashoffset = lineDesktopLength;
 
-function showLine() {
+lineMobile.style.strokeDasharray = lineMobileLength;
+lineMobile.style.strokeDashoffset = lineMobileLength;
+
+function showLine(line) {
   const scrollPercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-  const draw = pathLength * scrollPercent;
-  line.style.strokeDashoffset = pathLength - draw;
+  if (line.getTotalLength() > 3000) {
+    const draw = lineMobileLength * scrollPercent;
+    line.style.strokeDashoffset = lineMobileLength - draw;
+  }
+  const draw = lineDesktopLength * scrollPercent;
+  line.style.strokeDashoffset = lineDesktopLength - draw;
 }
+
+window.addEventListener("scroll", () => { showLine(lineDesktop); });
+window.addEventListener("scroll", () => { showLine(lineMobile); });
 
 /* scrolling part */
 const scrollElements = document.querySelectorAll(".js-scroll");
