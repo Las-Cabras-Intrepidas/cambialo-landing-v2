@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Poppins";
-  src: url("./assets/fonts/Poppins-Regular.ttf") format("ttf"),
+  src:
+    url("./assets/fonts/Poppins-Regular.ttf") format("ttf"),
     url("./assets/fonts/Poppins-Regular.woff") format("woff"),
     url("./assets/fonts/Poppins-Regular.woff2") format("woff2");
 }
@@ -18,8 +19,6 @@ svg {
   position: absolute;
   left: 48%;
   transform: translate(-50%, 0);
-
-  /* display: inline-block; */
   top: 0;
 }
 
@@ -28,7 +27,7 @@ svg {
 }
 
 .line-mobile {
-  top: 64%;
+  top: 60%;
   display: inline-block;
 }
 
@@ -135,6 +134,7 @@ section {
 .column {
   width: 90%;
   text-align: center;
+  z-index: 2;
 }
 
 .paragraph {
@@ -178,6 +178,13 @@ section {
   position: absolute;
   bottom: -15px;
   left: calc(92% - 50%);
+}
+
+.product-text {
+  background-color: #fff;
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 0 0 1rem 1rem;
 }
 
 .product-detail a {
