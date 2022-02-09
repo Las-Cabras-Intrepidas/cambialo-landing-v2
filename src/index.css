@@ -234,7 +234,7 @@ footer h4 {
 
 @media (max-width: 440px) {
   .line-mobile {
-    width: 300px;
+    min-width: 300px;
   }
 }
 
